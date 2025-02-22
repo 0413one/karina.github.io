@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* CSS Document */
+a {
+    text-decoration:none;
+	color:#FFA398;
+}
+a.ht {
+	color:#000;
+}
+body {
+overflow-x:hidden;	
+}
+header {
+    position:fixed;
+    background:#FFF;
+    height:60px;
+    width:100vw;
+    top:0px;
+    left:0px;
+    z-index:2;
+}
+div {
+    background-color:#FFF;
+    border-radius:10px; 
+	padding:10px;
+}
+tit {
+	font-size:32px;
+	color:#FFBABA;
+	font-weight:bold;
+
+}
+tab {
+	background-color:#FFBABA;
+	color:#FFF;
+	padding:1px;
+	border-radius:8px; 
+	line-height:1.8;
+}
+footer {
+    position:fixed;
+    background:#FFF;
+    height:25px;
+    width:100vw;
+    bottom:0px;
+    left:0px;
+    z-index:2;
+}
