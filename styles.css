@@ -12,7 +12,7 @@ overflow-x:hidden;
 }
 header {
     position:fixed;
-    background:#FFF;
+    background:#FFFFFFDD;
     height:60px;
     width:100vw;
     top:0px;
@@ -20,7 +20,7 @@ header {
     z-index:2;
 }
 div {
-    background-color:#FFFFFFAA;
+    background-color:#FFFFFFCC;
     border-radius:10px; 
 	padding:10px;
 }
