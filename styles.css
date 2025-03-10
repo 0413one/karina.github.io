@@ -7,6 +7,10 @@ a {
 a.ht {
 	color:#000;
 }
+a.bt {
+	color:#FFF;
+	text-decoration:none;
+}
 body {
 overflow-x:hidden;	
 }
