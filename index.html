@@ -12,8 +12,10 @@
 <script>
  const screenWidth = window.screen.width;
  const screenHeight = window.screen.height;
+
  if (screenWidth < 400) {
-  alert('当前设备分辨率过低，为保持更好的浏览体验，推荐使用pc端访问。');
+    alert('当前设备分辨率过低，为保持更好的浏览体验，请使用pc端访问。');
+    // window.location.href = "https://example.com/optimized-page";
 }
 
 </script>
@@ -50,6 +52,11 @@ left:1%;
      <a class="ht" href="photo.htm" target="main">
       <img src="https://cn-nb1.rains3.com/photos/icon/icons8-photo-gallery-48.png" alt="相册" width="20"/>
       相册
+     </a>
+       &nbsp;
+     <a class="ht" href="world.htm" target="main">
+      <img src="https://photos.cn-nb1.rains3.com/icon/icons8-headstone-50.png" alt="世界" width="19"/>
+      世界
      </a>
        &nbsp;
      <a class="ht" href="app.htm" target="main">
