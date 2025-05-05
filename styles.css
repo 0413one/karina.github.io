@@ -1,60 +1,49 @@
 @charset "utf-8";
 /* CSS Document */
-a {
-    text-decoration:none;
-	color:#FFA398;
-}
-a.ht {
-	color:#000;
-}
-a.bt {
-	color:#FFF;
-	text-decoration:none;
-}
-body {
-overflow-x:hidden;	
-}
-header {
-    position:fixed;
-    background:#FFFFFFCC;
-    height:60px;
-    width:100vw;
-    top:0px;
-    left:0px;
-    z-index:2;
-}
-div {
-    background-color:#FFFFFFCC;
-    border-radius:10px; 
-	padding:10px;
-}
-tit {
-	font-size:30px;
-	color:#000;
-}
-tit.a {
-	font-size:36px;
-	color:#FFBABA;
-	font-weight:bold;
-}
-tit.b {
-	font-size:39px;
-	color:#000;
-	font-weight:bold;
-}
-tab {
+footer {
+            position: fixed;
+            background: #693434;
+            height: 50px;
+            width: 100vw;
+            bottom: 0px;
+            left: 0px;
+            z-index: 2;
+        }
+
+        a {
+            text-decoration: none;
+            color: #170B00;
+        }
+
+        /* 水印样式 */
+        .watermark {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: -1;
+            opacity: 0.3;
+            font-size: 48px;
+            color: #FFFFFF;
+            font-weight: bold;
+        }
+		
+		tab {
 	background-color:#FFA398;
 	color:#FFF;
 	padding:1px;
 	border-radius:8px; 
 	line-height:1.8;
 }
-footer {
-    position:fixed;
-    background:#FFF;
-    height:25px;
-    width:100vw;
-    bottom:0px;
-    left:0px;
-    z-index:2;
+
+a.ht {
+	color:#000;
+}
+a.bt {
+	color:#FFF;
+	text-decoration:none;
 }
