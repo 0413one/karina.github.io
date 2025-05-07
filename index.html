@@ -185,53 +185,7 @@
             </td>
         </tr>
     </table>
-</footer>
-
-<script>
-    // 获取可拖动元素
-    const div = document.getElementById('draggable');
-    let isDragging = false; // 拖动状态标记
-    let startX, startY, xOffset, yOffset; // 初始坐标和偏移量
-
-    // 鼠标按下事件（开始拖动）
-    div.addEventListener('mousedown', (e) => {
-        isDragging = true;
-        startX = e.clientX; // 鼠标按下时的水平坐标
-        startY = e.clientY; // 鼠标按下时的垂直坐标
-        xOffset = e.clientX - parseInt(div.style.left) || 0; // 计算水平偏移量
-        yOffset = e.clientY - parseInt(div.style.top) || 0; // 计算垂直偏移量
-
-        // 鼠标移动时更新位置
-        document.addEventListener('mousemove', mouseMoveHandler);
-        // 鼠标松开时停止拖动
-        document.addEventListener('mouseup', mouseUpHandler);
-    });
-
-    // 鼠标移动事件处理函数
-    function mouseMoveHandler(e) {
-        if (isDragging) {
-            // 计算新的位置
-            const newX = e.clientX - xOffset;
-            const newY = e.clientY - yOffset;
-            // 限制拖动范围（可选，避免超出页面）
-            const maxX = window.innerWidth - div.offsetWidth;
-            const maxY = window.innerHeight - div.offsetHeight;
-            const clampedX = Math.max(0, Math.min(newX, maxX));
-            const clampedY = Math.max(0, Math.min(newY, maxY));
-            // 更新元素位置
-            div.style.left = `${clampedX}px`;
-            div.style.top = `${clampedY}px`;
-        }
-    }
-
-    // 鼠标松开事件处理函数
-    function mouseUpHandler() {
-        isDragging = false;
-        // 移除移动和松开事件监听（避免内存泄漏）
-        document.removeEventListener('mousemove', mouseMoveHandler);
-        document.removeEventListener('mouseup', mouseUpHandler);
-    }
-</script>
-
+ </footer>
+ <script src="drag.js"></script>
 </body>
 </html>
