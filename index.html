@@ -11,6 +11,36 @@
     <div class="watermark">
         karina.xin
     </div>
+    
+    <div class="nya" id="draggable">
+     <table width="100%" border="0" cellspacing="5" bgcolor="#FFE6E6">
+       <tr>
+        <td align="left">
+         <img src="https://photos.cn-nb1.rains3.com/icons/A/IMG_7425.png" width="25" valign="middle"/>
+         <font size="2">
+          &nbsp;linlin.exe
+         </font>
+        <td align="right">
+            <img src="https://photos.cn-nb1.rains3.com/icons/A/IMG_7382.png" width="25" />
+            <img src="https://photos.cn-nb1.rains3.com/icons/A/IMG_7381.png" width="25" />
+        </td>
+     </tr>
+      <tr>
+       <td bgcolor="#FFC5C5">
+        <img src="https://photos.cn-nb1.rains3.com/IMG_7422.png" height="166" />
+       </td>
+       <td valign="top" align="center">
+        <a onclick='return confirm("正在执行”摸摸”事件，是否执行喵？");'>
+         <tab>&nbsp;摸摸&nbsp;</tab>
+        </a> 
+        <br />
+        <a onclick='return confirm("正在执行”投喂”事件，是否执行喵？");'>
+         <tab>&nbsp;投喂&nbsp;</tab>
+        </a> 
+       </td>
+      </tr>
+     </table>
+    </div>
 
     <table border="0" align="left" cellspacing="10">
         <tr align="center" style="vertical-align: top;">
@@ -92,7 +122,7 @@
         </td>
         <td style="vertical-align: top;">
             <a href="dream.htm" target="main">
-                <img src="https://photos.cn-nb1.rains3.com/icons/IMG_7461.png" width="65" />
+                <img src="https://photos.cn-nb1.rains3.com/icons/IMG_7467.png" width="65" />
                 <br />
                 捕梦网
             </a>
@@ -156,5 +186,52 @@
         </tr>
     </table>
 </footer>
+
+<script>
+    // 获取可拖动元素
+    const div = document.getElementById('draggable');
+    let isDragging = false; // 拖动状态标记
+    let startX, startY, xOffset, yOffset; // 初始坐标和偏移量
+
+    // 鼠标按下事件（开始拖动）
+    div.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        startX = e.clientX; // 鼠标按下时的水平坐标
+        startY = e.clientY; // 鼠标按下时的垂直坐标
+        xOffset = e.clientX - parseInt(div.style.left) || 0; // 计算水平偏移量
+        yOffset = e.clientY - parseInt(div.style.top) || 0; // 计算垂直偏移量
+
+        // 鼠标移动时更新位置
+        document.addEventListener('mousemove', mouseMoveHandler);
+        // 鼠标松开时停止拖动
+        document.addEventListener('mouseup', mouseUpHandler);
+    });
+
+    // 鼠标移动事件处理函数
+    function mouseMoveHandler(e) {
+        if (isDragging) {
+            // 计算新的位置
+            const newX = e.clientX - xOffset;
+            const newY = e.clientY - yOffset;
+            // 限制拖动范围（可选，避免超出页面）
+            const maxX = window.innerWidth - div.offsetWidth;
+            const maxY = window.innerHeight - div.offsetHeight;
+            const clampedX = Math.max(0, Math.min(newX, maxX));
+            const clampedY = Math.max(0, Math.min(newY, maxY));
+            // 更新元素位置
+            div.style.left = `${clampedX}px`;
+            div.style.top = `${clampedY}px`;
+        }
+    }
+
+    // 鼠标松开事件处理函数
+    function mouseUpHandler() {
+        isDragging = false;
+        // 移除移动和松开事件监听（避免内存泄漏）
+        document.removeEventListener('mousemove', mouseMoveHandler);
+        document.removeEventListener('mouseup', mouseUpHandler);
+    }
+</script>
+
 </body>
 </html>
