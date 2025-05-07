@@ -14,7 +14,13 @@ footer {
             text-decoration: none;
             color: #170B00;
         }
-
+        
+		#draggable {
+            position: absolute; /* 必须设置绝对定位 */
+            cursor: move; /* 鼠标样式为移动 */
+			border: 1px solid #ddd;
+        }
+		
         /* 水印样式 */
         .watermark {
             position: fixed;
@@ -31,6 +37,13 @@ footer {
             color: #FFFFFF;
             font-weight: bold;
         }
+		
+		.nya {
+            position: fixed;
+            bottom: 120px;
+            right: 20px;
+            display: flex;
+		}
 		
 		tab {
 	background-color:#FFA398;
