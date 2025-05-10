@@ -1,5 +1,17 @@
 @charset "utf-8";
 /* CSS Document */
+@font-face {
+      font-family: 'Fontist AI character creation Qiheng'; /* 字体名称，自定义 */
+      src: url('https://fonts.cn-nb1.rains3.com/%E5%AD%97%E4%BD%93%E5%AE%B6AI%E9%80%A0%E5%AD%97%E6%9F%92%E6%81%92.ttf') format('truetype'); 
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    /* 全局应用字体 */
+    * {
+      font-family: 'Fontist AI character creation Qiheng';
+    }
+	
 footer {
             position: fixed;
             background: #693434EE;
@@ -36,14 +48,21 @@ footer {
             font-size: 48px;
             color: #FFFFFF;
             font-weight: bold;
+			pointer-events: none;
         }
-		
-		.nya {
-            position: fixed;
-            bottom: 120px;
-            right: 20px;
-            display: flex;
-		}
+
+        #date {
+            color: #FFF;
+            font-size: 15px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+		#time {
+            color: #FFF;
+            font-size: 15px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
 		
 		tab {
 	background-color:#FFA398;
