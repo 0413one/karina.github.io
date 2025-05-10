@@ -1,15 +1,15 @@
 @charset "utf-8";
 /* CSS Document */
 @font-face {
-      font-family: 'Fontist AI character creation Qiheng'; /* 字体名称，自定义 */
-      src: url('https://fonts.cn-nb1.rains3.com/%E5%AD%97%E4%BD%93%E5%AE%B6AI%E9%80%A0%E5%AD%97%E6%9F%92%E6%81%92.ttf') format('truetype'); 
+      font-family: 'ChillRoundM'; /* 字体名称，自定义 */
+      src: url('https://fonts.cn-nb1.rains3.com/ChillRoundM.ttf') format('truetype'); 
       font-weight: normal;
       font-style: normal;
     }
 
     /* 全局应用字体 */
     * {
-      font-family: 'Fontist AI character creation Qiheng';
+      font-family: 'ChillRoundM';
     }
 	
 footer {
