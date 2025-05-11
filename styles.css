@@ -36,10 +36,9 @@
 		
 		
 		.az-nav {
-  /* 定位：固定在页面右侧，垂直居中 */
   position: fixed; 
-  right: 10px; /* 距离右侧20像素 */
-  top: 50%; /* 顶部位置50% */
+  right: 10px;
+  top: 50%;
   transform: translateY(-50%); /* 向上偏移50%自身高度，实现垂直居中 */
   
   /* 视觉样式 */
@@ -52,10 +51,10 @@
 	.az-nav a {
   /* 每个字母链接的样式 */
   display: block; /* 块级元素，独占一行 */
-  margin: 8px 0; /* 上下间距8px */
+  margin: 5px 0; /* 上下间距8px */
   color: #333; /* 文字颜色 */
-  font-size: 10px; /* 字体大小 */
-  transition: color 0.3s; /* 鼠标悬停动画 */
+  font-size: 9px; /* 字体大小 */
+  transition: color 0.5s; /* 鼠标悬停动画 */
 }
 
 .az-nav a:hover {
