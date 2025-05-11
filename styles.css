@@ -43,7 +43,7 @@
   
   /* 视觉样式 */
   background: rgba(255, 255, 255, 0.9); /* 半透明白色背景 */
-  padding: 10px; /* 内边距 */
+  padding: 7px; /* 内边距 */
   border-radius: 15px; /* 圆角 */
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* 阴影 */
   z-index: 1000; /* 确保在内容上方 */
@@ -51,7 +51,7 @@
 	.az-nav a {
   /* 每个字母链接的样式 */
   display: block; /* 块级元素，独占一行 */
-  margin: 5px 0; /* 上下间距8px */
+  margin: 3px 0;
   color: #333; /* 文字颜色 */
   font-size: 9px; /* 字体大小 */
   transition: color 0.5s; /* 鼠标悬停动画 */
