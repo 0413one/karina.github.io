@@ -37,7 +37,7 @@
 		
 		.az-nav {
   position: fixed; 
-  right: 10px;
+  right: 8px;
   top: 50%;
   transform: translateY(-50%); /* 向上偏移50%自身高度，实现垂直居中 */
   
